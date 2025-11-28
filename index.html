@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AURA - AI Companion</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'primary': 'var(--color-bg-primary)',
+              'secondary': 'var(--color-bg-secondary)',
+              'tertiary': 'var(--color-bg-tertiary)',
+              'text-primary': 'var(--color-text-primary)',
+              'text-secondary': 'var(--color-text-secondary)',
+              'accent': 'var(--color-accent)',
+              'accent-hover': 'var(--color-accent-hover)',
+              'accent-secondary': 'var(--color-accent-secondary)',
+              'border-color': 'var(--color-border)',
+            },
+            keyframes: {
+              'gradient-pan': {
+                '0%': { backgroundPosition: '0% 50%' },
+                '50%': { backgroundPosition: '100% 50%' },
+                '100%': { backgroundPosition: '0% 50%' },
+              },
+              'neon-pulse': {
+                '0%, 100%': { 
+                  textShadow: '0 0 5px var(--color-accent), 0 0 10px var(--color-accent), 0 0 20px var(--color-accent), 0 0 40px var(--color-accent-secondary), 0 0 80px var(--color-accent-secondary)'
+                },
+                '50%': { 
+                  textShadow: '0 0 10px var(--color-accent), 0 0 20px var(--color-accent), 0 0 40px var(--color-accent-secondary), 0 0 80px var(--color-accent-secondary), 0 0 120px var(--color-accent-secondary)'
+                },
+              },
+              'fade-in': {
+                'from': { opacity: 0 },
+                'to': { opacity: 1 },
+              },
+              'slide-up': {
+                'from': { transform: 'translateY(40px) scale(0.9)', opacity: 0 },
+                'to': { transform: 'translateY(0) scale(1)', opacity: 1 },
+              }
+            },
+            animation: {
+              'gradient-pan': 'gradient-pan 10s ease infinite',
+              'neon-pulse': 'neon-pulse 4s infinite ease-in-out',
+              'fade-in': 'fade-in 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+              'slide-up': 'slide-up 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+            }
+          },
+        },
+      }
+    </script>
+<script type="importmap">
+{
+  "imports": {
+    "@react-three/fiber": "https://aistudiocdn.com/@react-three/fiber@^9.4.0",
+    "@react-three/drei": "https://aistudiocdn.com/@react-three/drei@^10.7.7",
+    "three": "https://aistudiocdn.com/three@^0.181.1",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.29.1",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+</body>
+</html>

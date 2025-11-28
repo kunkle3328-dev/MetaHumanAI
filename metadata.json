@@ -1,0 +1,7 @@
+{
+  "name": "Copy of MetaHuman LIVE AI Assistant",
+  "description": "An ultra-realistic, conversational AI assistant featuring a 3D MetaHuman avatar, real-time lip-sync, a multi-agent brain, long-term memory, and a suite of productivity tools, all powered by the Gemini Live API for natural, full-duplex voice interaction.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
